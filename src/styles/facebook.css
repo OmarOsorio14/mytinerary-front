@@ -1,0 +1,12 @@
+.facebook-button{
+	background-color: #38548e;
+	color: white;
+	padding: .3rem .5rem .3rem .5rem;
+	margin-right: 1rem;
+	border-radius: 5px;
+	font-size: .9em;
+}
+.facebook-button:hover{
+	background-color: #4367b1;
+
+}
