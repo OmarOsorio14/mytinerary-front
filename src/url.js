@@ -1,1 +1,1 @@
-export const url = 'https://mytinerary-osorio.herokuapp.com/'
+export const url = 'https://mytinerary-osorio-back.herokuapp.com/'
