@@ -1,6 +1,9 @@
 {
   "name": "mytinerary",
   "version": "0.1.0",
+	"engines": {
+    "node": "v16.15.0"
+  },
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.6.4",
