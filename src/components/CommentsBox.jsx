@@ -15,7 +15,7 @@ export default function CommentsBox({id, comments}) {
 		if(user){
 			dispatch(itineraryActions.AddComment({
 				idItinerary: id,
-				message: event.target["message"].value
+				message: event.target["message"].value.trim()
 			}))
 			event.target["message"].value = ""
 		}else{
@@ -27,7 +27,7 @@ export default function CommentsBox({id, comments}) {
 		if(user){
 			dispatch(itineraryActions.UpdateComment({
 				idComment: commentEdit,
-				message: event.target["update"].value
+				message: event.target["update"].value.trim()
 			}))
 			setCommentEdit("")
 		}else{

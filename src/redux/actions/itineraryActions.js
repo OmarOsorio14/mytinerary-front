@@ -27,7 +27,10 @@ const itineraryActions = {
 			return async(dispatch, getState) => {
 				if(data==="not logged"){
 					toast.error("for this action you must be logged in first")
-				}else{
+				}else if(data.message.length === 0){
+					toast.error("please enter a message")
+				}
+				else{
 					const token = localStorage.getItem('token')
 					const res = await axios.post(`${url}api/itineraries/comment`, {data}, {
 						headers: {
@@ -47,6 +50,8 @@ const itineraryActions = {
 			return async(dispatch, getState) => {
 				if(data==="not logged"){
 					toast.error("for this action you must be logged in first")
+				}else if(data.message.length === 0){
+					toast.error("please enter a new message valid")
 				}else{
 				const token = localStorage.getItem('token')
 				const res = await axios.put(`${url}api/itineraries/comment`, {data}, {
